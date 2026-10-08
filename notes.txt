@@ -1,5 +1,0 @@
-- faire en sorte que les boutons en haut de la page aient une couleur de background différentes
-
-- ajouter une animation d'appear on scroll
-
-
