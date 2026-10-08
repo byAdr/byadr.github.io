@@ -4,6 +4,7 @@ const navLinks = glideBar ? [...glideBar.querySelectorAll(".nbtw-10__link")] : [
 const typedText = document.getElementById("typed-text");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+let activeLink = navLinks[0] || null;
 let navigationTarget = null;
 
 function movePillTo(link) {
@@ -18,14 +19,21 @@ function movePillTo(link) {
     glidePill.style.width = `${linkRect.width}px`;
 }
 
-function updateActiveAttributes(activeLink) {
-    navLinks.forEach((link) => {
-        if (link === activeLink) {
-            link.setAttribute("aria-current", "page");
+function updateActiveLink(link) {
+    if (!link) {
+        return;
+    }
+
+    navLinks.forEach((item) => {
+        if (item === link) {
+            item.setAttribute("aria-current", "page");
         } else {
-            link.removeAttribute("aria-current");
+            item.removeAttribute("aria-current");
         }
     });
+
+    activeLink = link;
+    movePillTo(activeLink);
 }
 
 function getCurrentLink() {
@@ -36,12 +44,12 @@ function getCurrentLink() {
         .at(-1);
 
     if (!currentSection) {
-        return navLinks[0];
+        return navLinks[0] || null;
     }
 
-    return navLinks.find(
-        (link) => link.hash === `#${currentSection.id}`
-    ) || navLinks[0];
+    return navLinks.find((link) => {
+        return link.hash === `#${currentSection.id}`;
+    }) || navLinks[0] || null;
 }
 
 function setupSpringGlideMenu() {
@@ -49,9 +57,7 @@ function setupSpringGlideMenu() {
         return;
     }
 
-    let activeLink = getCurrentLink();
-
-    updateActiveAttributes(activeLink);
+    updateActiveLink(getCurrentLink());
 
     navLinks.forEach((link) => {
         link.addEventListener("pointerenter", () => {
@@ -63,11 +69,8 @@ function setupSpringGlideMenu() {
         });
 
         link.addEventListener("click", () => {
-            activeLink = link;
             navigationTarget = document.querySelector(link.hash);
-
-            updateActiveAttributes(activeLink);
-            movePillTo(activeLink);
+            updateActiveLink(link);
         });
     });
 
@@ -87,9 +90,11 @@ function setupSpringGlideMenu() {
             }
         }
 
-        activeLink = getCurrentLink();
-        updateActiveAttributes(activeLink);
-        movePillTo(activeLink);
+        const currentLink = getCurrentLink();
+
+        if (currentLink && currentLink !== activeLink) {
+            updateActiveLink(currentLink);
+        }
     }, { passive: true });
 
     window.addEventListener("resize", () => {
@@ -102,11 +107,17 @@ function setupSpringGlideMenu() {
 }
 
 function startTypingEffect() {
-    if (!typedText || prefersReducedMotion) {
+    if (!typedText) {
         return;
     }
 
     const message = "André PEREIRA";
+
+    if (prefersReducedMotion) {
+        typedText.textContent = message;
+        return;
+    }
+
     let index = 0;
 
     typedText.textContent = "";
