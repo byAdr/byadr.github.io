@@ -1,185 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Portfolio d'André Pereira, développeur intéressé par l'UI design, Roblox, le QA testing et les projets web.">
+    <title>André Pereira | Portfolio</title>
+    <link rel="preload" href="assets/images/optimized/profile.png" as="image">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="background"></div>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#introduction">Introduction</a></li>
+    <header class="site-header" data-header>
+        <nav class="site-nav" aria-label="Navigation principale">
+            <a class="brand" href="#introduction" aria-label="Retour à l'accueil">AP</a>
+            <ul class="nav-links">
+                <li><a href="#introduction">Accueil</a></li>
                 <li><a href="#competences">Compétences</a></li>
-                <li><a href="#mesprojets">Projets</a></li>
+                <li><a href="#projets">Projets</a></li>
                 <li><a href="#certifications">Certifications</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="introduction">
+    <main>
+        <section class="hero section-shell" id="introduction">
+            <div class="hero-content">
+                <img class="profile-picture" src="assets/images/optimized/profile.png" width="128" height="128" alt="Portrait d'André Pereira" fetchpriority="high">
+                <p class="eyebrow">Développeur junior & UI Designer</p>
+                <h1><span id="typed-text">André PEREIRA</span><span class="cursor" aria-hidden="true">|</span></h1>
+                <p class="hero-text">
+                    19 ans, originaire du Portugal. 
+                    Je suis passionné par le développement informatique 
+                    et l'UI Design. 
+                    Cherchant toujours à apprendre et à m'améliorer,
+                    mon objectif est de participer à des projets innovants qui élargissent 
+                    mes connaissances et me permettent d'éveiller ma créativité.
+                </p>
+                <div class="contact-links" aria-label="Liens de contact">
+                    <a class="button" href="https://www.linkedin.com/in/adr-pereira/">
+                        <img src="assets/images/optimized/linkedin.png" width="20" height="20" alt="" loading="lazy" decoding="async">
+                        LinkedIn
+                    </a>
+                    <a class="button" href="mailto:andrefilipe.pereira@lyceefulbert.fr">
+                        <img src="assets/images/optimized/gmail.png" width="28" height="16" alt="" loading="lazy" decoding="async">
+                        Email
+                    </a>
+                    <a class="button" href="https://github.com/byAdr">
+                        <img src="assets/images/optimized/github.png" width="22" height="22" alt="" loading="lazy" decoding="async">
+                        GitHub
+                    </a>
+                    <a class="button" href="https://x.com/GoldPlayer_Dev">
+                        <img src="assets/images/optimized/x.png" width="18" height="18" alt="" loading="lazy" decoding="async">
+                        X
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <img id="profpicture" src="images/ImageProfil.png" style="border-radius: 50%; width: 100px; height: 100px;">
-        <h1 class="typing-title"><span id="typed-text"></span><span class="cursor">|</span></h1>
-        <p>19 ans, originaire du Portugal. Je suis passionné par le développement informatique en particulier tout ce qui touche à l'UI Design, cherchant toujours à apprendre et à m'améliorer. Mon objectif est de participer à des projets innovants qui élargissent mes connaissances et me permettent d'éveiller ma créativité.</p>
-        <div class="button-container">
-            <a href="https://www.linkedin.com/in/andr%C3%A9-pereira-1ab41833a/" class="btn">
-                <img src="images/LinkedIn-logo.png" style="width: 20px; height: 20px;">
-                LinkedIn
-            </a>
-            <a href="mailto:andrefiliepeo909@gmail.com" class="btn">
-                <img src="images/Gmail-Logo.png" style="width: 35px; height: 20px;">
-                andrefiliepeo909@gmail.com
-            </a>
-            <a href="https://github.com/bygld" class="btn">
-                <img src="images\github-logo.png" style="width: 25px; height: 25px;">
-                GitHub
-            </a>
-            <a href="https://x.com/GoldPlayer_Dev" class="btn">
-                <img src="images/x-logo.png" style="width: 20px; height: 20px;">
-                Twitter
-            </a>
-        </div>
-    </section>
+        <section class="section-shell" id="competences">
+            <div class="section-heading">
+                <p class="eyebrow">Stack & outils</p>
+                <h2>Compétences</h2>
+            </div>
 
-    <section id="competences">
-        <h1>🛠️ Mes compétences</h1>
-        <div class="container">
-            <div class="category" id="categorycompetences">
-                <div class="category" id="competences1">
-                    <h2>Langages</h2>
-                    <div class="bls" id="bulles">
-                        <div class="bl" id="bulle"><img src="images\HTML5_logo_and_wordmark.png" alt="HTML"></div>
-                        <div class="bl" id="bulle"><img src="images\CSS3_logo_and_wordmark.png" alt="CSS"></div>
-                        <div class="bl" id="bulle"><img src="images\js_logo.png" alt="JavaScript"></div>
-                        <div class="bl" id="bulle"><img src="images\Python-logo-notext.png" alt="Python"></div>
-                        <div class="bl" id="bulle"><img src="images\Lua-Logo.png" alt="Lua"></div>
-                        <div class="bl" id="bulle"><img src="images\arduino.png" alt="Arduino"></div>
+            <div class="skills-grid">
+                <article class="skill-group">
+                    <h3>Langages</h3>
+                    <ul class="logo-list" aria-label="Langages de programmation">
+                        <li><img src="assets/images/optimized/php.webp" width="45" height="45" alt="PHP"></li>
+                        <li><img src="assets/images/optimized/html.png" width="45" height="45" alt="HTML"></li>
+                        <li><img src="assets/images/optimized/css.png" width="45" height="45" alt="CSS"></li>
+                        <li><img src="assets/images/optimized/javascript.png" width="45" height="45" alt="JavaScript"></li>
+                        <li><img src="assets/images/optimized/python.png" width="45" height="45" alt="Python"></li>
+                        <li><img src="assets/images/optimized/lua.png" width="45" height="45" alt="Lua"></li>
+                        <li><img src="assets/images/optimized/csharp.webp" width="45" height="45" alt="C#"></li>
+                        <li><img src="assets/images/optimized/sql.png" width="45" height="45" alt="SQL"></li>
+                        
+                    </ul>
+                </article>
+
+                <article class="skill-group">
+                    <h3>Logiciels</h3>
+                    <ul class="logo-list" aria-label="Logiciels et plateformes">
+                        <li><img src="assets/images/optimized/vscode.png" width="45" height="45" alt="Visual Studio Code"></li>
+                        <li><img src="assets/images/optimized/github.png" width="45" height="45" alt="GitHub"></li>
+                        <li><img src="assets/images/optimized/solidworks.png" width="45" height="45" alt="SolidWorks"></li>
+                        <li><img src="assets/images/optimized/arduino.png" width="45" height="45" alt="Arduino"></li>
+                        <li><img src="assets/images/optimized/pixlr.png" width="45" height="45" alt="Pixlr"></li>
+                        <li><img src="assets/images/optimized/canva.png" width="45" height="45" alt="Canva"></li>
+                        <li><img src="assets/images/optimized/mysql.webp" width="45" height="45" alt="MySQL"></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell" id="projets">
+            <div class="section-heading">
+                <p class="eyebrow">Selection</p>
+                <h2>Projets</h2>
+            </div>
+
+            <div class="projects-list">
+                <article class="project-card">
+                    <img class="project-media" src="assets/images/site43.gif" width="960" height="540" alt="Aperçu du projet SCP Site-43" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <div>
+                            <h3>SCP: Site-43 | RP FR</h3>
+                            <div class="tags"><span class="tag lua">Lua</span></div>
+                        </div>
+                        <p>
+                            De 2023 à 2024, j'ai approfondi mes connaissances en Lua en participant au développement
+                            du jeu Roblox SCP: Site-43. Ce premier gros projet m'a permis de collaborer sur une
+                            expérience suivie par une grosse communauté française.
+                        </p>
+                        <div class="project-actions">
+                            <a class="button" href="https://www.roblox.com/games/4733728555/SCP-Site-43-RP-FR">Page du jeu</a>
+                            <a class="button button-secondary" href="https://www.roblox.com/communities/5654094/Studio-Baguette#!/about">Studio</a>
+                        </div>
                     </div>
-                </div>
-                <div class="category" id="competences2">
-                    <h2>Logiciels</h2>
-                    <div class="bls" id="bulles">
-                        <div class="bl" id="bulle"><img src="images\Visualstudiocode.png" alt="VisualStudioCode"></div>
-                        <div class="bl" id="bulle"><img src="images\github-logo.png" alt="Github"></div>
-                        <div class="bl" id="bulle"><img src="images\github-copilot-white-icon.png" alt="Copilot"></div>
-                        <div class="bl" id="bulle"><img src="images\solid.png" alt="Solidworks"></div>
-                        <div class="bl" id="bulle"><img src="images\pixlr.png" alt="Pixlr"></div>
+                </article>
+
+                <article class="project-card">
+                    <img class="project-media" src="assets/images/rivals.gif" width="960" height="540" alt="Aperçu du projet Anime Rivals" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <div>
+                            <h3>Anime Rivals</h3>
+                            <div class="tags"><span class="tag qa">QA testing</span></div>
+                        </div>
+                        <p>
+                            Depuis juillet 2024, j'ai intégré l'équipe QA Testing d'Anime Rivals. Mon rôle est de
+                            tester les nouvelles fonctionnalités, identifier les points forts et signaler les axes
+                            d'amélioration avant publication.
+                        </p>
                     </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
+                </article>
 
-    <section id="projets">
-        <h1 id="mesprojets">🚀 Mes projets</h1>
-        <div class="projet">
-            <div class="projet-image">
-                <img src="images\site43.gif" alt="Aperçu du projet">
+                <article class="project-card">
+                    <img class="project-media" src="assets/images/CC2.gif" width="960" height="540" alt="Aperçu du projet Bismarck Industries" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <div>
+                            <h3>Car Crushers 2</h3>
+                            <div class="tags"><span class="tag qa">QA testing</span><span class="tag lua">Lua</span></div>
+                        </div>
+                        <p>
+                            Ma plus vieille contribution, datant de 2019, ce fut mon premier contact avec le 
+                            monde du QA Testing. Je faisais partie de l'équipe de Beta Testing, les tests réalisés
+                            étaient surtout axés sur les performances du moteur physique.
+                            Aujourd'hui le jeu compte plus de 1,3 milliards de connexions et une communauté
+                            de plus de 8 millions de membres.
+                        </p>
+                        <div class="project-actions">
+                            <a class="button" href="https://www.roblox.com/communities/2726951/Car-Crushers-Community#!/about">Site du studio</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <div class="projet-details">
-                <h2>SCP: Site-43 | RP FR</h2>
-                <div class="projet-technos">
-                    <span class="techno lua">LUA</span>
-                </div>
-                <p>
-                    De 2023 à 2024, j'ai eu l'occasion d'approfondir mes connaissances en LUA en participant au 
-                    développement d'un jeu sur Roblox nommé Site-43. Dirigé par le Studio Baguette, ce fut 
-                    mon premier gros projet avec plus de 1,2 millions de connexions depuis le 
-                    lancement du jeu en 2020.
-                </p>
-                <div class="projet-actions">
-                    <a class="btn" href="https://www.roblox.com/games/4733728555/SCP-Site-43-RP-FR">🎮 Page du Jeu</a>
-                    <a class="btn" href="https://www.roblox.com/communities/5654094/Studio-Baguette#!/about">🏢 Page du Studio</a>
-                </div>
-            </div>
-        </div>
-        <div class="projet">
-            <div class="projet-image">
-                <img src="images\rivals.gif" alt="Aperçu du projet">
-            </div>
-            <div class="projet-details">
-                <h2>Anime Rivals</h2>
-                <div class="projet-technos">
-                    <span class="techno qa">QA TESTING</span>
-                </div>
-                <p>
-                    Depuis juillet 2024, j"ai intégré l'équipe de QA Testing d'Anime Rivals, un jeu en
-                    développement par deux studios, Sora et Akio.gg. Ils constituent à eux deux une communautée 
-                    de plus de 55.000 membres. Mon rôle est de tester les nouvelles fonctionnalités et
-                    de faire un rapport sur les points positifs et négatifs de ces ajouts.
-                </p>
-                <div class="projet-actions">
-                </div>
-            </div>
-        </div>
-        <div class="projet">
-            <div class="projet-image">
-                <img src="images\Bismarck.gif" alt="Aperçu du projet">
-            </div>
-            <div class="projet-details">
-                <h2>Bismarck Industries</h2>
-                <div class="projet-technos">
-                    <span class="techno lua">LUA</span>
-                </div>
-                <p>
-                    Pour une durée de 2 mois, j'ai effectué plusieurs commissions pour 
-                    ce studio vendant des assets pour des jeux de simulation de combats. 
-                    Environ 11.000 personnes suivent activement les nouvelles sorties.
-                    Cette expérience m'a appris à travailler en équipe et à respecter des délais.
-                </p>
-                <div class="projet-actions">
-                    <a class="btn" href="https://bismarckindustry.com/">🚢 Site du studio</a>
-                </div>
-            </div>
-        </div>
-        <div class="projet">
-            <div class="projet-image">
-                <img src="images\kaijusite.gif" alt="Aperçu du projet">
-            </div>
-            <div class="projet-details">
-                <h2>Wiki Kaiju n°8</h2>
-                <div class="projet-technos">
-                    <span class="techno html">HTML</span>
-                    <span class="techno css">CSS</span>
-                </div>
-                <p>
-                    Au cours de l'année 2024, j'ai créé un site style fandom dans le cadre d'une séquence découverte
-                    de l'html et du css en classe de terminale. Ce projet m'a permis de découvrir le développement web
-                    tout en travailant sur un sujet qui m'intéressait à ce moment.
-                    Le projet ne sera ni continué ni publié.
-                </p>
-                <div class="projet-actions">
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="certifications">
-        <h1>🎓 Mes Certifications</h1>
-        
-        <div class="certification">
-            <img src="images\DNB.png" alt="Logo Certification">
-            <div class="certification-content">
-                <h2>Diplôme national du brevet</h2>
-                <h3>Mention Très Bien</h3>
-                <p>Le Diplôme National du Brevet (DNB) est un examen qui marque la fin de la scolarité au collège en France. Il évalue les connaissances et compétences acquises par les élèves dans plusieurs matières, dont le français, les mathématiques, l'histoire-géographie, les sciences et une langue vivante. Il comprend une épreuve écrite, un oral, ainsi qu'un contrôle continu basé sur les résultats des élèves tout au long de l'année.</p>
+        <section class="section-shell" id="certifications">
+            <div class="section-heading">
+                <p class="eyebrow">Parcours</p>
+                <h2>Certifications</h2>
             </div>
-        </div>
-    
-        <div class="certification">
-            <img src="images\Pix_logo.png" alt="Logo Certification">
-            <div class="certification-content">
-                <h2>Certificat Pix</h2>
-                <h3>Niveau Avancé 1</h3>
-                <p>Le certificat Pix est une certification officielle qui atteste du niveau de maîtrise des compétences numériques d'un individu. Il est délivré par la plateforme Pix après un test évaluant différentes compétences comme la sécurité numérique, la programmation ou la gestion des données. Reconnu par l’État Français.</p>
+
+            <div class="certifications-list">
+                <article class="certification-card">
+                    <img src="assets/images/SIOFulbert.png" width="80" height="80" alt="Logo du BTS SIO" loading="lazy" decoding="async">
+                    <div>
+                        <h3>BTS SIO - Option Solutions Logicielles et Applications Métiers</h3>
+                        <p class="certification-level">2025-2027</p>
+                        <p>
+                            Le BTS SIO atteste de la maîtrise des compétences dans les domaines de l'informatique et du
+                            développement logiciel, avec une spécialisation en systèmes d'information et numérique.
+                        </p>
+                    </div>
+                </article>
+           
+                <article class="certification-card">
+                    <img src="assets/images/STI2D.png" width="80" height="80" alt="Logo du Baccalauréat STI2D" loading="lazy" decoding="async">
+                    <div>
+                        <h3>Baccalauréat STI2D - Option Systèmes d'Information et Numérique</h3>
+                        <p class="certification-level">2023-2025</p>
+                        <p>
+                            Le Baccalauréat STI2D atteste de la maîtrise des compétences dans les domaines de l'ingénierie et de l'informatique, avec une orientation sur les systèmes d'information et la numérique.
+                        </p>
+                    </div>
+                </article>
             </div>
-        </div>
-    
-    </section>
-    <script src="script.js"></script>
+        </section>
+    </main>
 </body>
 </html>
