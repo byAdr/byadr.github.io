@@ -408,10 +408,23 @@ h3 {
         grid-template-columns: 1fr;
     }
 
+    .project-card {
+        grid-template-rows: auto auto;
+    }
+
     .project-media {
+        grid-column: 1;
+        grid-row: 1;
         aspect-ratio: 16 / 9;
         height: auto;
         min-height: 0;
+    }
+
+    .project-content {
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: flex-start;
+        background: rgba(255, 255, 255, 0.045);
     }
 
     .contact-links .button {
