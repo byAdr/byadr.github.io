@@ -3,205 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio d'André Pereira, développeur intéressé par l'UI design, Roblox, le QA testing et les projets web.">
+    <meta name="description" content="Portfolio d'André Pereira, développeur junior et UI Designer passionné par le développement, Roblox, le QA testing et les interfaces modernes.">
     <title>André Pereira | Portfolio</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://unpkg.com">
     <link rel="preload" href="assets/images/optimized/profile.png" as="image">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
 <body>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#introduction" aria-label="Retour a l'accueil">AP</a>
+        <nav class="top-nav" aria-label="Navigation principale">
+            <a href="#competences">Stack</a>
+            <a href="#projets">Projets</a>
+            <a href="#certifications">Parcours</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
     <main>
         <section class="hero section-shell" id="introduction">
-            <div class="hero-content">
-                <img class="profile-picture" src="assets/images/optimized/profile.png" width="128" height="128" alt="Portrait d'André Pereira" fetchpriority="high">
-                <p class="eyebrow">Développeur junior & UI Designer</p>
-                <h1><span id="typed-text">André PEREIRA</span><span class="cursor" aria-hidden="true">|</span></h1>
-                <p class="hero-text">
-                    19 ans, originaire du Portugal. 
-                    Je suis passionné par le développement informatique 
-                    et l'UI Design. 
-                    Cherchant toujours à apprendre et à m'améliorer,
-                    mon objectif est de participer à des projets innovants qui élargissent 
-                    mes connaissances et me permettent d'éveiller ma créativité.
+            <div class="hero-copy">
+                <p class="eyebrow js-reveal">Développeur junior & UI Designer</p>
+                <h1 class="hero-title js-title">
+                    <span>André</span>
+                    <span>Pereira</span>
+                </h1>
+                <p class="hero-text js-reveal">
+                    19 ans, originaire du Portugal. Je suis passionné par le développement informatique et l'UI Design.
+                    Cherchant toujours à apprendre et à m'améliorer, mon objectif est de participer à des projets innovants
+                    qui élargissent mes connaissances et me permettent d'éveiller ma créativité.
                 </p>
-                <div class="contact-links" aria-label="Liens de contact">
-                    <a class="button" href="https://www.linkedin.com/in/adr-pereira/" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/images/optimized/linkedin.png" width="20" height="20" alt="" loading="lazy" decoding="async">
-                        LinkedIn
-                    </a>
-                    <a class="button" href="mailto:andrefilipe.pereira@lyceefulbert.fr">
-                        <img src="assets/images/optimized/gmail.png" width="28" height="16" alt="" loading="lazy" decoding="async">
-                        Email
-                    </a>
-                    <a class="button" href="https://github.com/byAdr" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/images/optimized/github.png" width="22" height="22" alt="" loading="lazy" decoding="async">
-                        GitHub
-                    </a>
-                    <a class="button" href="https://x.com/GoldPlayer_Dev" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/images/optimized/x.png" width="18" height="18" alt="" loading="lazy" decoding="async">
-                        X
-                    </a>
+                <div class="hero-actions js-reveal">
+                    <a class="button button-primary magnetic" href="mailto:andrefilipe.pereira@lyceefulbert.fr">Me contacter</a>
+                    <a class="button magnetic" href="#projets">Voir les projets</a>
+                </div>
+            </div>
+
+            <aside class="identity-card tilt-card js-reveal" aria-label="Carte d'identite professionnelle">
+                <div class="portrait-wrap">
+                    <img class="profile-picture" src="assets/images/optimized/profile.png" width="220" height="220" alt="Portrait d'André Pereira" fetchpriority="high">
+                </div>
+                <div class="identity-content">
+                    <p>Disponible pour progresser sur des projets web, UI et gameplay.</p>
+                    <dl>
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>UI Design</dd>
+                        </div>
+                        <div>
+                            <dt>Depuis</dt>
+                            <dd>2019 en QA</dd>
+                        </div>
+                        <div>
+                            <dt>Formation</dt>
+                            <dd>BTS SIO SLAM</dd>
+                        </div>
+                    </dl>
+                </div>
+            </aside>
+        </section>
+
+        <section class="stack-marquee" aria-label="Technologies utilisees">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="assets/images/optimized/php.webp" width="44" height="44" alt="PHP">
+                    <img src="assets/images/optimized/html.png" width="44" height="44" alt="HTML">
+                    <img src="assets/images/optimized/css.png" width="44" height="44" alt="CSS">
+                    <img src="assets/images/optimized/javascript.png" width="44" height="44" alt="JavaScript">
+                    <img src="assets/images/optimized/python.png" width="44" height="44" alt="Python">
+                    <img src="assets/images/optimized/lua.png" width="44" height="44" alt="Lua">
+                    <img src="assets/images/optimized/csharp.webp" width="44" height="44" alt="C#">
+                    <img src="assets/images/optimized/sql.png" width="44" height="44" alt="SQL">
+                    <img src="assets/images/optimized/vscode.png" width="44" height="44" alt="Visual Studio Code">
+                    <img src="assets/images/optimized/github.png" width="44" height="44" alt="GitHub">
+                    <img src="assets/images/optimized/mysql.webp" width="44" height="44" alt="MySQL">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="assets/images/optimized/php.webp" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/html.png" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/css.png" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/javascript.png" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/python.png" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/lua.png" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/csharp.webp" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/sql.png" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/vscode.png" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/github.png" width="44" height="44" alt="">
+                    <img src="assets/images/optimized/mysql.webp" width="44" height="44" alt="">
                 </div>
             </div>
         </section>
 
         <section class="section-shell" id="competences">
-            <div class="section-heading">
+            <div class="section-heading js-section">
                 <p class="eyebrow">Stack & outils</p>
                 <h2>Compétences</h2>
+                <p>Une base technique polyvalente, orientée création d'interfaces, prototypage, jeu et tests.</p>
             </div>
 
             <div class="skills-grid">
-                <article class="skill-group">
-                    <h3>Langages</h3>
+                <article class="skill-group tilt-card js-section">
+                    <div>
+                        <p class="card-index">01</p>
+                        <h3>Langages</h3>
+                    </div>
                     <ul class="logo-list" aria-label="Langages de programmation">
-                        <li><img src="assets/images/optimized/php.webp" width="45" height="45" alt="PHP"></li>
-                        <li><img src="assets/images/optimized/html.png" width="45" height="45" alt="HTML"></li>
-                        <li><img src="assets/images/optimized/css.png" width="45" height="45" alt="CSS"></li>
-                        <li><img src="assets/images/optimized/javascript.png" width="45" height="45" alt="JavaScript"></li>
-                        <li><img src="assets/images/optimized/python.png" width="45" height="45" alt="Python"></li>
-                        <li><img src="assets/images/optimized/lua.png" width="45" height="45" alt="Lua"></li>
-                        <li><img src="assets/images/optimized/csharp.webp" width="45" height="45" alt="C#"></li>
-                        <li><img src="assets/images/optimized/sql.png" width="45" height="45" alt="SQL"></li>
-                        
+                        <li><img src="assets/images/optimized/php.webp" width="45" height="45" alt="PHP"><span>PHP</span></li>
+                        <li><img src="assets/images/optimized/html.png" width="45" height="45" alt="HTML"><span>HTML</span></li>
+                        <li><img src="assets/images/optimized/css.png" width="45" height="45" alt="CSS"><span>CSS</span></li>
+                        <li><img src="assets/images/optimized/javascript.png" width="45" height="45" alt="JavaScript"><span>JS</span></li>
+                        <li><img src="assets/images/optimized/python.png" width="45" height="45" alt="Python"><span>Python</span></li>
+                        <li><img src="assets/images/optimized/lua.png" width="45" height="45" alt="Lua"><span>Lua</span></li>
+                        <li><img src="assets/images/optimized/csharp.webp" width="45" height="45" alt="C#"><span>C#</span></li>
+                        <li><img src="assets/images/optimized/sql.png" width="45" height="45" alt="SQL"><span>SQL</span></li>
                     </ul>
                 </article>
 
-                <article class="skill-group">
-                    <h3>Logiciels</h3>
+                <article class="skill-group tilt-card js-section">
+                    <div>
+                        <p class="card-index">02</p>
+                        <h3>Logiciels</h3>
+                    </div>
                     <ul class="logo-list" aria-label="Logiciels et plateformes">
-                        <li><img src="assets/images/optimized/vscode.png" width="45" height="45" alt="Visual Studio Code"></li>
-                        <li><img src="assets/images/optimized/github.png" width="45" height="45" alt="GitHub"></li>
-                        <li><img src="assets/images/optimized/solidworks.png" width="45" height="45" alt="SolidWorks"></li>
-                        <li><img src="assets/images/optimized/arduino.png" width="45" height="45" alt="Arduino"></li>
-                        <li><img src="assets/images/optimized/pixlr.png" width="45" height="45" alt="Pixlr"></li>
-                        <li><img src="assets/images/optimized/canva.png" width="45" height="45" alt="Canva"></li>
-                        <li><img src="assets/images/optimized/mysql.webp" width="45" height="45" alt="MySQL"></li>
+                        <li><img src="assets/images/optimized/vscode.png" width="45" height="45" alt="Visual Studio Code"><span>VS Code</span></li>
+                        <li><img src="assets/images/optimized/github.png" width="45" height="45" alt="GitHub"><span>GitHub</span></li>
+                        <li><img src="assets/images/optimized/solidworks.png" width="45" height="45" alt="SolidWorks"><span>SolidWorks</span></li>
+                        <li><img src="assets/images/optimized/arduino.png" width="45" height="45" alt="Arduino"><span>Arduino</span></li>
+                        <li><img src="assets/images/optimized/pixlr.png" width="45" height="45" alt="Pixlr"><span>Pixlr</span></li>
+                        <li><img src="assets/images/optimized/canva.png" width="45" height="45" alt="Canva"><span>Canva</span></li>
+                        <li><img src="assets/images/optimized/mysql.webp" width="45" height="45" alt="MySQL"><span>MySQL</span></li>
                     </ul>
                 </article>
             </div>
         </section>
 
-        <section class="section-shell" id="projets">
-            <div class="section-heading">
+        <section class="section-shell projects-shell" id="projets">
+            <div class="section-heading js-section">
                 <p class="eyebrow">Selection</p>
                 <h2>Projets</h2>
+                <p>Des expériences Roblox, du QA testing et des contributions où la qualité ressentie compte autant que la technique.</p>
             </div>
 
             <div class="projects-list">
-                <article class="project-card">
+                <article class="project-card js-project">
                     <img class="project-media" src="assets/images/shinobi.gif" width="960" height="540" alt="Aperçu du projet Shinobi Odyssey" loading="lazy" decoding="async">
                     <div class="project-content">
-                        <div>
-                            <h3>Shinobi Odyssey</h3>
-                            <div class="tags"><span class="tag lua">Lua</span></div>
-                        </div>
+                        <p class="project-date">2025</p>
+                        <h3>Shinobi Odyssey</h3>
+                        <div class="tags"><span class="tag lua">Lua</span><span class="tag modeling">3D</span></div>
                         <p>
-                            Mon projet le plus récent datant de 2025, j'ai participé à la modelisation 3D et à la programmation du jeu.
+                            Mon projet le plus récent, j'ai participé à la modelisation 3D et à la programmation du jeu.
                             Cependant faute par manque de temps de la part de l'équipe, le projet est en pause.
                         </p>
-                        <div class="project-actions">
-                            <a class="button" href="https://www.roblox.com/games/17374083159/Shinobi-Odyssey" target="_blank" rel="noopener noreferrer">Page du jeu</a>
-                        </div>
+                        <a class="text-link" href="https://www.roblox.com/games/17374083159/Shinobi-Odyssey" target="_blank" rel="noopener noreferrer">Page du jeu</a>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card js-project">
                     <img class="project-media" src="assets/images/rivals.gif" width="960" height="540" alt="Aperçu du projet Anime Rivals" loading="lazy" decoding="async">
                     <div class="project-content">
-                        <div>
-                            <h3>Anime Rivals</h3>
-                            <div class="tags"><span class="tag qa">QA testing</span></div>
-                        </div>
+                        <p class="project-date">Depuis 2024</p>
+                        <h3>Anime Rivals</h3>
+                        <div class="tags"><span class="tag qa">QA testing</span></div>
                         <p>
                             Depuis juillet 2024, j'ai intégré l'équipe QA Testing d'Anime Rivals. Mon rôle est de
                             tester les nouvelles fonctionnalités, identifier les points forts et signaler les axes
-                            d'amélioration avant publication.
-                            Ce projet est toujours en cours de développement, aucune date de sortie n'a été annoncée publiquement pour le moment.
+                            d'amélioration avant publication. Ce projet est toujours en cours de développement.
                         </p>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card js-project">
                     <img class="project-media" src="assets/images/site43.gif" width="960" height="540" alt="Aperçu du projet SCP Site-43" loading="lazy" decoding="async">
                     <div class="project-content">
-                        <div>
-                            <h3>SCP: Site-43 | RP FR</h3>
-                            <div class="tags"><span class="tag lua">Lua</span></div>
-                        </div>
+                        <p class="project-date">2023-2024</p>
+                        <h3>SCP: Site-43 | RP FR</h3>
+                        <div class="tags"><span class="tag lua">Lua</span></div>
                         <p>
                             De 2023 à 2024, j'ai approfondi mes connaissances en Lua en participant au développement
                             du jeu Roblox SCP: Site-43. Ce projet semblant anodin au départ, a désormais atteint les
                             3 millions de connexions.
                         </p>
                         <div class="project-actions">
-                            <a class="button" href="https://www.roblox.com/games/4733728555/SCP-Site-43-RP-FR" target="_blank" rel="noopener noreferrer">Page du jeu</a>
-                            <a class="button button-secondary" href="https://www.roblox.com/communities/5654094/Studio-Baguette#!/about" target="_blank" rel="noopener noreferrer">Studio</a>
+                            <a class="text-link" href="https://www.roblox.com/games/4733728555/SCP-Site-43-RP-FR" target="_blank" rel="noopener noreferrer">Page du jeu</a>
+                            <a class="text-link" href="https://www.roblox.com/communities/5654094/Studio-Baguette#!/about" target="_blank" rel="noopener noreferrer">Studio</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <img class="project-media" src="assets/images/CC2.gif" width="960" height="540" alt="Aperçu du projet Bismarck Industries" loading="lazy" decoding="async">
+                <article class="project-card js-project">
+                    <img class="project-media" src="assets/images/CC2.gif" width="960" height="540" alt="Aperçu du projet Car Crushers 2" loading="lazy" decoding="async">
                     <div class="project-content">
-                        <div>
-                            <h3>Car Crushers 2</h3>
-                            <div class="tags"><span class="tag qa">QA testing</span><span class="tag lua">Lua</span></div>
-                        </div>
+                        <p class="project-date">Depuis 2019</p>
+                        <h3>Car Crushers 2</h3>
+                        <div class="tags"><span class="tag qa">QA testing</span><span class="tag lua">Lua</span></div>
                         <p>
-                            Ma plus vieille contribution, datant de 2019, ce fut mon premier contact avec le 
-                            monde du QA Testing. Je faisais partie de l'équipe de Beta Testing, les tests réalisés
-                            étaient surtout axés sur les performances du moteur physique.
-                            Aujourd'hui le jeu compte plus de 1,3 milliards de connexions et une communauté
+                            Ma plus vieille contribution, ce fut mon premier contact avec le monde du QA Testing. Je faisais
+                            partie de l'équipe de Beta Testing, les tests réalisés étaient surtout axés sur les performances
+                            du moteur physique. Aujourd'hui le jeu compte plus de 1,3 milliards de connexions et une communauté
                             de plus de 8 millions de membres.
                         </p>
-                        <div class="project-actions">
-                            <a class="button" href="https://www.roblox.com/communities/2726951/Car-Crushers-Community#!/about" target="_blank" rel="noopener noreferrer">Site du studio</a>
-                        </div>
+                        <a class="text-link" href="https://www.roblox.com/communities/2726951/Car-Crushers-Community#!/about" target="_blank" rel="noopener noreferrer">Site du studio</a>
                     </div>
                 </article>
             </div>
         </section>
 
         <section class="section-shell" id="certifications">
-            <div class="section-heading">
+            <div class="section-heading js-section">
                 <p class="eyebrow">Parcours</p>
                 <h2>Certifications</h2>
+                <p>Une progression centrée sur le développement logiciel, les systèmes d'information et la création numérique.</p>
             </div>
 
             <div class="certifications-list">
-                <article class="certification-card">
+                <article class="certification-card tilt-card js-section">
                     <img src="assets/images/SIOFulbert.png" width="80" height="80" alt="Logo du BTS SIO" loading="lazy" decoding="async">
                     <div>
-                        <h3>BTS SIO - Option Solutions Logicielles et Applications Métiers</h3>
                         <p class="certification-level">2025-2027</p>
+                        <h3>BTS SIO - Option Solutions Logicielles et Applications Métiers</h3>
                         <p>
                             Le BTS SIO atteste de la maîtrise des compétences dans les domaines de l'informatique et du
                             développement logiciel, avec une spécialisation en systèmes d'information et numérique.
                         </p>
                     </div>
                 </article>
-           
-                <article class="certification-card">
+
+                <article class="certification-card tilt-card js-section">
                     <img src="assets/images/STI2D.png" width="80" height="80" alt="Logo du Baccalauréat STI2D" loading="lazy" decoding="async">
                     <div>
-                        <h3>Baccalauréat STI2D - Option Systèmes d'Information et Numérique</h3>
                         <p class="certification-level">2023-2025</p>
+                        <h3>Baccalauréat STI2D - Option Systèmes d'Information et Numérique</h3>
                         <p>
-                            Le Baccalauréat STI2D atteste de la maîtrise des compétences dans les domaines de l'ingénierie et de l'informatique, avec une orientation sur les systèmes d'information et la numérique.
+                            Le Baccalauréat STI2D atteste de la maîtrise des compétences dans les domaines de l'ingénierie
+                            et de l'informatique, avec une orientation sur les systèmes d'information et le numérique.
                         </p>
                     </div>
                 </article>
             </div>
         </section>
-    </main>
 
-    <nav class="nbtw-10__bar" id="nbtw-10-bar" aria-label="Navigation principale">
-        <span class="nbtw-10__pill" id="nbtw-10-pill" aria-hidden="true"></span>
-        <a class="nbtw-10__link" href="#introduction" aria-current="page">Accueil</a>
-        <a class="nbtw-10__link" href="#competences">Compétences</a>
-        <a class="nbtw-10__link" href="#projets">Projets</a>
-        <a class="nbtw-10__link" href="#certifications">Certifications</a>
-    </nav>
+        <section class="contact-section section-shell" id="contact">
+            <p class="eyebrow js-section">Contact</p>
+            <h2 class="js-section">Un projet, une idée, une équipe à rejoindre ?</h2>
+            <div class="contact-links js-section" aria-label="Liens de contact">
+                <a class="button button-primary magnetic" href="mailto:andrefilipe.pereira@lyceefulbert.fr">
+                    <img src="assets/images/optimized/gmail.png" width="28" height="16" alt="" loading="lazy" decoding="async">
+                    Email
+                </a>
+                <a class="button magnetic" href="https://www.linkedin.com/in/adr-pereira/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/optimized/linkedin.png" width="20" height="20" alt="" loading="lazy" decoding="async">
+                    LinkedIn
+                </a>
+                <a class="button magnetic" href="https://github.com/byAdr" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/optimized/github.png" width="22" height="22" alt="" loading="lazy" decoding="async">
+                    GitHub
+                </a>
+                <a class="button magnetic" href="https://x.com/GoldPlayer_Dev" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/optimized/x.png" width="18" height="18" alt="" loading="lazy" decoding="async">
+                    X
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
